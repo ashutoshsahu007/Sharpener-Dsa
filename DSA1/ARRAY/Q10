@@ -9,9 +9,9 @@ class Solution {
         for(int i =0; i<2*n;i++){
             arr[i] = nums[x];
             x++;
-            arr[i+1] = nums[n+y];
-            y++;
             i++;
+            arr[i] = nums[n+y];
+            y++;
          }
 
          return arr;
