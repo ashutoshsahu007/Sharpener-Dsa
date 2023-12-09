@@ -1,0 +1,23 @@
+
+class Solution{
+    //Function to check if two arrays are equal or not.
+    public static boolean check(long A[],long B[],int N)
+    {
+        Arrays.sort(A);
+        Arrays.sort(B);
+        
+        int l1 = A.length;
+        int l2 = B.length;
+        
+        if(l1 != l2){
+            return false;
+        }else{
+            for(int i=0;i<l1;i++){
+                if(A[i] != B[i])
+                return false;
+            }
+        }
+        
+        return true;
+    }
+}
