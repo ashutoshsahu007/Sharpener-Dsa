@@ -1,0 +1,24 @@
+public class Solution {
+    // DO NOT MODIFY THE LIST. IT IS READ ONLY
+    public ArrayList<Integer> repeatedNumber(final List<Integer> A) {
+        
+        HashSet<Integer> hm  = new HashSet<>();
+        
+        ArrayList<Integer> list = new ArrayList<>();  
+        
+        for(int i=0 ; i<A.size(); i++){
+            if(hm.contains(A.get(i)))
+            list.add(A.get(i));
+            
+            hm.add(A.get(i));
+        }
+        
+        for(int i=0;i<A.size();i++){
+            if(hm.remove(i+1) == false)
+            list.add(i+1);
+        }
+        
+        return list;
+        
+    }
+}
